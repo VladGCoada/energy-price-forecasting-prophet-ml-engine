@@ -94,6 +94,33 @@ Main package areas:
 - `src/eu_energy_intelligence/intelligence`: anomaly scoring, forecasting, backtesting, reports, scenarios
 - `src/eu_energy_intelligence/orchestration`: local, production, and 2030-style orchestration
 
+## Technologies Used
+
+The project is mainly built in **Python**, with a structure that works both as a local analytics project and as a foundation for a more production-style data platform.
+
+Some of the main technologies used here are:
+
+- **PySpark**
+  - used as the platform-oriented processing layer and architectural target for scalable pipeline execution
+- **pandas**
+  - used for local time-series shaping, feature preparation, and forecasting workflows
+- **ENTSOE-PY** and **requests**
+  - used to access ENTSO-E market data and support direct API-driven ingestion
+- **Pydantic** and **pydantic-settings**
+  - used for typed configuration, settings management, and safer runtime behavior
+- **YAML**
+  - used for configuration and data contract definitions
+- **scikit-learn**
+  - used for anomaly detection, especially through `IsolationForest`
+- **Prophet**
+  - used for time-series forecasting and historical backtesting of market prices
+- **MLflow**
+  - used for experiment tracking in the forecasting workflow
+- **pytest**
+  - used for unit and integration testing across the platform
+
+The repo also includes scaffolding for technologies that are common in more production-focused data platforms, such as **Databricks-style job packaging**, **lakehouse / medallion patterns**, and **infrastructure-oriented setup** for future expansion.
+
 ## Setup
 
 ### Recommended Python version
