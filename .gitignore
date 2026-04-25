@@ -21,4 +21,7 @@ dist/
 data/raw/
 data/processed/
 grok_code.py
+code_GROKEN.py
 ALL_CODE_BASELINE.py
+EU_ENERGY_PLATFORM_CONSOLIDATED.py
+EU_ENERGY_PLATFORM_EXTENSION.py
