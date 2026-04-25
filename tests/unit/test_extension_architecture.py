@@ -24,6 +24,7 @@ def test_platform_config_defaults_and_schema_map(monkeypatch: pytest.MonkeyPatch
     assert config.catalog == "emit_dev"
     assert config.schemas["bronze"] == "bronze"
     assert "DK-1" in config.bidding_zones
+    assert "RO" in config.bidding_zones
 
 
 def test_platform_config_env_override(monkeypatch: pytest.MonkeyPatch) -> None:
@@ -38,7 +39,9 @@ def test_platform_config_env_override(monkeypatch: pytest.MonkeyPatch) -> None:
 
 def test_entsoe_client_zone_metadata_and_resolution() -> None:
     assert ZONE_EIC["NL"] == "10YNL----------L"
+    assert ZONE_EIC["RO"] == "10YRO-TEL------P"
     assert ("DE", "DK-1") in FLOW_CORRIDORS
+    assert ("RO", "HU") in FLOW_CORRIDORS
     assert "Other renewable" in RENEWABLE_PSR_TYPES
 
     class Delta:
@@ -54,7 +57,7 @@ def test_entsoe_client_zone_metadata_and_resolution() -> None:
 
 def test_entsoe_client_unknown_zone_raises() -> None:
     with pytest.raises(ValueError):
-        ProductionEntsoeClient.eic("RO")
+        ProductionEntsoeClient.eic("XX")
 
 
 def test_pd_timestamp_helper_requires_pandas_or_returns_two_values() -> None:

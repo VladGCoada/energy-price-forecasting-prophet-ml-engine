@@ -174,7 +174,7 @@ class PlatformConfig(BaseSettings if BaseSettings is not object else object):  #
 
     # Zones
     bidding_zones: list[str] = Field(
-        default=["NL", "DE", "DK-1", "DK-2"],
+        default=["NL", "DE", "DK-1", "DK-2", "FR", "BE", "RO"],
         description="ENTSO-E bidding zones to process",
     )
 
@@ -390,6 +390,10 @@ ZONE_EIC: dict[str, str] = {
     "DE":   "10Y1001A1001A83F",
     "DK-1": "10YDK-1--------W",
     "DK-2": "10YDK-2--------M",
+    "FR":   "10YFR-RTE------C",
+    "BE":   "10YBE----------2",
+    "RO":   "10YRO-TEL------P",
+    "HU":   "10YHU-MAVIR----U",
 }
 
 #: Cross-border corridors to fetch flows for.
@@ -400,6 +404,16 @@ FLOW_CORRIDORS: list[tuple[str, str]] = [
     ("DK-1", "DE"),
     ("DK-1", "DK-2"),
     ("DK-2", "DK-1"),
+    ("NL", "FR"),
+    ("FR", "NL"),
+    ("BE", "NL"),
+    ("NL", "BE"),
+    ("BE", "DE"),
+    ("DE", "BE"),
+    ("FR", "BE"),
+    ("BE", "FR"),
+    ("RO", "HU"),
+    ("HU", "RO"),
 ]
 
 #: Production sources classified as renewable.

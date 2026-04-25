@@ -11,6 +11,9 @@ htmlcov/
 *.pyo
 *.pyd
 .env
+mlflow.db
+mlartifacts/
+mlruns/
 build/
 dist/
 *.egg-info/

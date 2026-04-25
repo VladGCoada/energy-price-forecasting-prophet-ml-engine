@@ -28,18 +28,22 @@ def test_build_renewable_stability_aggregates_rows_by_country() -> None:
     assert result == [
         {
             "country_code": "DE",
+            "event_date": "UNKNOWN_DATE",
             "total_generation": 30.0,
             "avg_generation": 15.0,
             "max_generation": 20.0,
             "min_generation": 10.0,
             "volatility_index": 10.0,
+            "interval_count": 2.0,
         },
         {
             "country_code": "NL",
+            "event_date": "UNKNOWN_DATE",
             "total_generation": 5.0,
             "avg_generation": 5.0,
             "max_generation": 5.0,
             "min_generation": 5.0,
             "volatility_index": 0.0,
+            "interval_count": 1.0,
         },
     ]

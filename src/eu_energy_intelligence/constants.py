@@ -17,4 +17,8 @@ COUNTRY_EIC_CODES = {
     "NL": "10YNL----------L",
     "DK1": "10YDK-1--------W",
     "DK2": "10YDK-2--------M",
+    "FR": "10YFR-RTE------C",
+    "BE": "10YBE----------2",
+    "RO": "10YRO-TEL------P",
+    "HU": "10YHU-MAVIR----U",
 }

@@ -74,7 +74,7 @@ class DQValidator(BaseTask):
             value = row.get("price_eur_mwh")
             return value is not None and float(value) > -600
         if name == "zone_valid":
-            return row.get("zone") in {"NL", "DE", "DK-1", "DK-2"}
+            return row.get("zone") in {"NL", "DE", "DK-1", "DK-2", "FR", "BE", "RO", "HU"}
         if name == "generation_not_negative":
             value = row.get("generation_mw")
             return value is not None and float(value) >= 0

@@ -27,6 +27,10 @@ ZONE_EIC: dict[str, str] = {
     "DE": "10Y1001A1001A83F",
     "DK-1": "10YDK-1--------W",
     "DK-2": "10YDK-2--------M",
+    "FR": "10YFR-RTE------C",
+    "BE": "10YBE----------2",
+    "RO": "10YRO-TEL------P",
+    "HU": "10YHU-MAVIR----U",
 }
 
 FLOW_CORRIDORS: list[tuple[str, str]] = [
@@ -36,6 +40,16 @@ FLOW_CORRIDORS: list[tuple[str, str]] = [
     ("DK-1", "DE"),
     ("DK-1", "DK-2"),
     ("DK-2", "DK-1"),
+    ("NL", "FR"),
+    ("FR", "NL"),
+    ("BE", "NL"),
+    ("NL", "BE"),
+    ("BE", "DE"),
+    ("DE", "BE"),
+    ("FR", "BE"),
+    ("BE", "FR"),
+    ("RO", "HU"),
+    ("HU", "RO"),
 ]
 
 RENEWABLE_PSR_TYPES: set[str] = {
