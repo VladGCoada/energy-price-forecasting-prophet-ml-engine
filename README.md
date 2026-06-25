@@ -9,14 +9,14 @@ At a simple level, WHAT DOES IT DO ?
 - run anomaly detection and forecasting
 - backtest price forecasts against real historical prices
 
-  What this project can tell you!!!!!!!!!!!!!!!!!!!!!
+  What this project can tell you?
 
 - What happened in a market during a given period?
 - How did prices, generation, load, and flows behave together?
 - Can a forecast trained on historical data predict a future period reasonably well?
 - Is the data complete enough to trust the intelligence output?
 
-Examples of outputs:->>>>>>>>>>>>>>>>
+Examples of outputs:->
 
 - daily renewable stability summaries
 - price spike analysis
